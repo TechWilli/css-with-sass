@@ -1,0 +1,66 @@
+// importando módulo de css criado para manter a organização do estilos
+@import './_variables';
+
+@mixin centerStuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dosis', Helvetica, sans-serif;
+    color: #454545;
+}
+
+.container {
+    @include centerStuff();
+    height: 100vh;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+
+.title-container {
+    box-sizing: border-box; // adiciona a medida da borda na porporção total do elemento
+    padding-left: 1rem;
+    margin: 1.5rem;
+    border-left: 5px solid $lightBlue;
+    width: 260px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $shadowColor;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        color: $lightBlue;
+    }
+}
+
+.card {
+    @include centerStuff();
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 5px solid $lightBlue;
+    background-color: white;
+    width: 260px;
+    height: 280px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $shadowColor;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    span {
+        color: $lightBlue;
+    }
+    
+}
